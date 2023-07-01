@@ -25,7 +25,7 @@ public class DAO {
     
     public List<Game> getTrendingGame(){
         List<Game> list = new ArrayList<>();
-        String query = "select  top 8 * from game";
+        String query = "select * from game";
         try {
             conn = new DBcontext().getConnection();
             ps = conn.prepareStatement(query);
