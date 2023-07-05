@@ -4918,7 +4918,7 @@ a:hover {
   color: #c4c3ca;
 }
 .link:hover {
-  color: #ffeba7;
+  color: #f189b1;
 }
 p {
   font-weight: 500;
@@ -4927,11 +4927,13 @@ p {
 }
 h4 {
   font-weight: 600;
+  color: #f189b1
 }
 h6 span{
   padding: 0 20px;
   text-transform: uppercase;
   font-weight: 700;
+  color: #f189b1
 }
 .section{
   position: relative;
@@ -4967,7 +4969,7 @@ h6 span{
   height: 36px;
   border-radius: 50%;
   color: #ffeba7;
-  background-color: #102770;
+  background-color: #f189b1;
   font-family: 'unicons';
   content: '\eb4f';
   z-index: 20;
@@ -5152,19 +5154,19 @@ h6 span{
   -ms-flex-pack: center;
   text-align: center;
   border: none;
-  background-color: #ffeba7;
-  color: #102770;
-  box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
+  background-color: #f189b1;
+  color: #000000;
+  box-shadow: 0 8px 24px 0 rgba(255, 167, 207, 0.2);
 }
 .btn:active,
 .btn:focus{  
   background-color: #102770;
-  color: #ffeba7;
+  color: #f189b1;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 .btn:hover{  
-  background-color: #102770;
-  color: #ffeba7;
+  background-color: #000000;
+  color: #f189b1;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 
