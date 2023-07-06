@@ -4979,6 +4979,7 @@ h6 span{
   text-align: center;
   font-size: 24px;
   transition: all 0.5s ease;
+  box-shadow: 0 3px 50px rgba(239, 170, 200, 0.5);
 }
 .checkbox:checked + label:before {
   transform: translateX(44px) rotate(-270deg);
@@ -4987,9 +4988,9 @@ h6 span{
 
 .card-3d-wrap {
   position: relative;
-  width: 440px;
+  width: 480px;
   max-width: 100%;
-  height: 400px;
+  height: 480px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   perspective: 800px;
@@ -5045,7 +5046,7 @@ h6 span{
 .form-group{ 
   position: relative;
   display: block;
-    margin: 0;
+    margin: 10;
     padding: 0;
 }
 .form-style {
@@ -5156,7 +5157,7 @@ h6 span{
   border: none;
   background-color: #f189b1;
   color: #000000;
-  box-shadow: 0 8px 24px 0 rgba(255, 167, 207, 0.2);
+  box-shadow: 0 3px 24px 0 rgba(255, 167, 207, 0.5);
 }
 .btn:active,
 .btn:focus{  
