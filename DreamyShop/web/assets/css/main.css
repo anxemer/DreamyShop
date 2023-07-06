@@ -1018,6 +1018,9 @@ top: -1px;
   padding-top: 90px;
   padding-bottom: 90px;
   position: relative;
+  background-color: #000;
+  border-top: 2px solid #f189b1;
+  border-bottom: 2px solid #f189b1;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1060,7 +1063,7 @@ top: -1px;
   left: 50%;
   bottom: 0;
   content: "";
-  background-color: #0167F3;
+  background-color: #eb84ce;
   height: 2px;
   width: 50px;
   margin-left: -25px;
@@ -1603,7 +1606,7 @@ top: -1px;
   -ms-flex-align: center;
   align-items: center;
   padding: 25px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #000000;
 }
 
 @media (max-width: 767px) {
@@ -1664,7 +1667,7 @@ top: -1px;
   line-height: 40px;
   text-align: center;
   display: block;
-  border: 1px solid #eee;
+  border: 1px solid #000000;
   border-radius: 50%;
 }
 
@@ -1708,7 +1711,7 @@ top: -1px;
   line-height: 40px;
   display: inline-block;
   border-radius: 50%;
-  border: 1px solid #eee;
+  border: 1px solid #000000;
   color: #555;
   font-size: 18px;
   text-align: center;
@@ -1752,7 +1755,7 @@ top: -1px;
   line-height: 40px;
   display: inline-block;
   border-radius: 50%;
-  border: 1px solid #eee;
+  border: 1px solid #000000;
   color: #555;
   font-size: 18px;
   text-align: center;
@@ -2319,7 +2322,7 @@ top: -1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-right: 1px solid #eee;
+  border-right: 1px solid #000000;
   margin-right: 40px;
   padding-right: 112px;
   cursor: pointer;
@@ -2370,7 +2373,7 @@ top: 2px;
   top: 68px;
   width: 241px;
   height: auto;
-  border: 1px solid #eee;
+  border: 1px solid #000000;
   background-color: #fff;
   opacity: 0;
   visibility: hidden;
@@ -2397,7 +2400,7 @@ top: 2px;
   top: 8px;
   width: 240px;
   height: auto;
-  border: 1px solid #eee;
+  border: 1px solid #000000;
   background-color: #fff;
   border-radius: 0;
   left: 239px;
@@ -2426,7 +2429,7 @@ top: 2px;
 }
 
 .header .mega-category-menu .sub-category li .inner-sub-category li a:hover {
-  color: #0167F3;
+  color: #e884c7;
 }
 
 .header .mega-category-menu .sub-category li:last-child {
@@ -2450,7 +2453,7 @@ top: 2px;
 }
 
 .header .mega-category-menu .sub-category li a:hover {
-  color: #0167F3;
+  color: #f292c8;
 }
 
 .header .nav-social {
@@ -2499,7 +2502,7 @@ top: 2px;
   line-height: 35px;
   text-align: center;
   display: block;
-  border: 1px solid #eee;
+  border: 1px solid #000000;
   border-radius: 50%;
   font-size: 13px;
   color: #555;
@@ -2597,7 +2600,8 @@ top: 2px;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   padding: 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #000000;
+  
 }
 
 .navbar-area.sticky {
@@ -2866,8 +2870,10 @@ top: 2px;
 ========================================*/
 .hero-area {
   position: relative;
-  background-color: #fff;
-  margin-top: 12px;
+  background-color: #000000;
+  border-top: 10px solid #000000;
+  border-bottom: 10px solid #000000;
+  /* margin-top: 12px ; */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3181,7 +3187,7 @@ top: 2px;
     Shipping Info CSS
 ========================================*/
 .shipping-info {
-  background-color: #f9f9f9;
+  background-color: #000000;
   padding: 50px 0;
 }
 
@@ -3196,7 +3202,7 @@ top: 2px;
   float: left;
   width: 25%;
   padding: 30px 40px;
-  border: 1px solid #eee;
+  border: 1px solid #f189b1;
   text-align: center;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -3223,7 +3229,7 @@ top: 2px;
 }
 
 .shipping-info .media-icon i {
-  color: #0167F3;
+  color: #f189b1;
   font-size: 35px;
 }
 
@@ -3258,6 +3264,7 @@ top: 2px;
   box-shadow: 0px 0px 20px #00000012;
   padding: 8px;
   background: #fff;
+  
 }
 
 .single-product .product-image {
@@ -3406,7 +3413,7 @@ top: 2px;
 
 /* End Single Product */
 .trending-product {
-  background-color: #f9f9f9;
+  background-color: #000000;
 }
 
 .trending-product .section-title {
@@ -4577,6 +4584,8 @@ top: 2px;
 .footer .footer-middle {
   padding-top: 40px;
   padding-bottom: 80px;
+  background-color: #000;
+  border-top: 2px solid #f189b1;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -4891,11 +4900,6 @@ top: 2px;
     display: none;
   }
 }
-
-
-/* Please ❤ this if you like it! */
-
-
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
 body{
@@ -5187,3 +5191,4 @@ h6 span{
 	width: auto;
 	display: block;
 }
+

@@ -5,11 +5,10 @@
  */
 package Control;
 
-import DAO.DAO;
-import Entity.Account;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,7 +18,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author anxem
  */
-public class LoginControl extends HttpServlet {
+@WebServlet(name = "LogoutControl", urlPatterns = {"/logout"})
+public class LogoutControl extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,19 +33,9 @@ public class LoginControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String user = request.getParameter("username");
-        String pass = request.getParameter("pass");
-        
-        DAO dao = new DAO();
-        Account a = dao.login(user, pass);
-        if(a == null){
-            request.setAttribute("mess", "WRONG USERNAME OR PASSWORD !");
-            request.getRequestDispatcher("Login.jsp").forward(request, response);
-        }else{
-            HttpSession session = request.getSession();
-            session.setAttribute("acc", a);
-            response.sendRedirect("home");
-        }
+        HttpSession session = request.getSession();
+        session.removeAttribute("acc");
+        response.sendRedirect("home");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

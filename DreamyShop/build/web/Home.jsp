@@ -59,23 +59,34 @@
                             <ul class="useful-links">
                                 <li><a href="home">Home</a></li>
                                 <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
+                                <c:if test="${sessionScope.acc.isAdmin == 1}">
+                                <li><a href="contact.html">Manager Products</a></li>
+                                </c:if>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="top-end">
+                            <c:if test="${sessionScope.acc != null}" >
                             <div class="user">
                                 <i class="lni lni-user"></i>
-                                Hello
+                                Hello ${sessionScope.acc.user}
                             </div>
+                            </c:if>
                             <ul class="user-login">
+                                <c:if test="${sessionScope.acc == null}" >
                                 <li>
                                     <a href="Login.jsp">Sign In</a>
                                 </li>
                                 <li>
-                                    <a href="register.html">Register</a>
+                                    <a href="Signup.jsp">Register</a>
                                 </li>
+                                </c:if>
+                                <c:if test="${sessionScope.acc != null}" >
+                                <li>
+                                    <a href="logout">Log Out</a>
+                                </li>
+                                </c:if>
                             </ul>
                         </div>
                     </div>
@@ -334,13 +345,13 @@
     <!-- End Hero Area -->
 
     <!-- Start Trending Product Area -->
-    <section class="trending-product section" style="margin-top: 12px;">
+    <section class="trending-product section" >
         <div class="container">
             <div class="row">
                 
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Trending Product</h2>
+                        <h2 style="color: #f189b1;">Trending Product</h2>
                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have
                             suffered alteration in some form.</p>
                     </div>
