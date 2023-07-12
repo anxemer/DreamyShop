@@ -6,12 +6,10 @@
 package Control;
 
 import DAO.DAO;
-import Entity.Category;
-import Entity.Game;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,7 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author anxem
  */
-public class CategoryControl extends HttpServlet {
+@WebServlet(name = "DeleteControl", urlPatterns = {"/delete"})
+public class DeleteControl extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,19 +33,11 @@ public class CategoryControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String cateId = request.getParameter("cid");
-        
+        String gid = request.getParameter("gid");
         DAO dao = new DAO();
-        List<Game> list = dao.getGameByCate(cateId);
-        List<Game> listAllGame = dao.getAllGame();
-        List<Category> listC = dao.getAllCategory();
+        dao.deleteGame(gid);
         
-        request.setAttribute("listG", listAllGame);
-        request.setAttribute("listC", listC);
-        request.setAttribute("listG", list);
-        request.getRequestDispatcher("GameByCategory.jsp").forward(request, response);
-
-            
+        response.sendRedirect("manager");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

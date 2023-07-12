@@ -11,23 +11,31 @@ package Entity;
 public class Game {
     private int id;
     private String name;
+    private String cateName;
     private float price;
-    private String title;
-    private String description;
     private int cateId;
     private String image;
+    
 
     public Game() {
     }
 
-    public Game(int id, String name,String image, float price, String title, String description, int cateId ) {
+    public Game(int id, String name,String image, float price, int cateId ) {
         this.id = id;
         this.name = name;
-        this.price = price;
-        this.title = title;
-        this.description = description;
-        this.cateId = cateId;
         this.image = image;
+        this.price = price;
+        this.cateId = cateId;
+        
+    }
+
+    public Game(int id, String name,String image, float price, int cateId,  String cateName) {
+        this.id = id;
+        this.name = name;
+        this.image = image;
+        this.price = price;
+        this.cateId = cateId;
+        this.cateName = cateName;
     }
 
     public int getId() {
@@ -53,22 +61,7 @@ public class Game {
     public void setPrice(float price) {
         this.price = price;
     }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    
 
     public int getCateId() {
         return cateId;
@@ -86,10 +79,22 @@ public class Game {
         this.image = image;
     }
 
+    public String getCateName() {
+        return cateName;
+    }
+
+    public void setCateName(String cateName) {
+        this.cateName = cateName;
+    }
+
     @Override
     public String toString() {
-        return "Game{" + "id=" + id + ", name=" + name + ", price=" + price + ", title=" + title + ", description=" + description + ", cateId=" + cateId + ", image=" + image + '}';
+        return "Game{" + "id=" + id + ", name=" + name + ", cateName=" + cateName + ", price=" + price + ", cateId=" + cateId + ", image=" + image + '}';
     }
+
+    
+
+    
     
     
 }

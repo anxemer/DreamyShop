@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author anxem
  */
-public class CategoryControl extends HttpServlet {
+public class ManagerControl extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,19 +34,13 @@ public class CategoryControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String cateId = request.getParameter("cid");
-        
         DAO dao = new DAO();
-        List<Game> list = dao.getGameByCate(cateId);
-        List<Game> listAllGame = dao.getAllGame();
+        List<Game> list = dao.getAllGame();
         List<Category> listC = dao.getAllCategory();
-        
-        request.setAttribute("listG", listAllGame);
+
         request.setAttribute("listC", listC);
         request.setAttribute("listG", list);
-        request.getRequestDispatcher("GameByCategory.jsp").forward(request, response);
-
-            
+        request.getRequestDispatcher("ManagerProduct.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
