@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Control;
 
@@ -9,20 +10,17 @@ import Entity.Category;
 import Entity.Game;
 import java.io.IOException;
 import java.io.PrintWriter;
-import static java.util.Collections.list;
 import java.util.List;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author anxem
+ * @author ADMIN
  */
-@WebServlet (name="HomeControl",urlPatterns={"/home"})
-public class HomeControl extends HttpServlet {
+public class DetailControl extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,16 +34,16 @@ public class HomeControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       DAO dao = new DAO();
-        List<Game> list = dao.getTrendingGame();
-        List<Category> listC = dao.getAllCategory();
-        List<Game> listS = dao.getGameSale();
-        Game newG = dao.getNewGame();   
-        request.setAttribute("listG", list);
-        request.setAttribute("listC", listC);
-        request.setAttribute("Sale", listS);
-        request.setAttribute("n", newG);
-        request.getRequestDispatcher("Home.jsp").forward(request, response);
+        try (PrintWriter out = response.getWriter()) {
+            String id = request.getParameter("pid");
+            DAO dao = new DAO();
+            Game g = dao.getGameByID(id);
+             List<Category> listC = dao.getAllCategory();
+//            Category c = dao.getCategoryByID(cid);
+            request.setAttribute("detail", g);
+            request.setAttribute("listC", listC);
+            request.getRequestDispatcher("Detail.jsp").forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

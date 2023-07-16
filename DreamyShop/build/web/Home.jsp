@@ -366,7 +366,7 @@
                         <div class="product-info">
                             <span class="category">${o.cateName}</span>
                             <h4 class="title">
-                                <a href="product-grids.html">${o.name}</a>
+                                <a href="detail?pid=${o.id}">${o.name}</a>
                             </h4>
                             <ul class="review">
                                 <li><i class="lni lni-star-filled"></i></li>
