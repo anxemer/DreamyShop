@@ -101,7 +101,7 @@
                         <div class="col-lg-3 col-md-3 col-7">
                             <!-- Start Header Logo -->
                             <a class="navbar-brand" href="home">
-                                <h1 style="color: aliceblue; font-size: medium;"><img src="assets\images\logo\taoanhdep_vinamilk_59684.png" alt="Logo"></h1>
+                                <h1 style="color: aliceblue; font-size: medium;">Dreamy Shop</h1>
                             </a>
                             <!-- End Header Logo -->
                         </div>

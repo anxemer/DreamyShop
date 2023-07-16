@@ -20,15 +20,6 @@
         <servlet-name>ManagerControl</servlet-name>
         <servlet-class>Control.ManagerControl</servlet-class>
     </servlet>
-    <servlet>
-
-        <servlet-name>AddControl</servlet-name>
-        <servlet-class>Control.AddControl</servlet-class>
-
-        <servlet-name>DetailControl</servlet-name>
-        <servlet-class>Control.DetailControl</servlet-class>
-
-    </servlet>
     <servlet-mapping>
         <servlet-name>HomeControl</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -48,15 +39,6 @@
     <servlet-mapping>
         <servlet-name>ManagerControl</servlet-name>
         <url-pattern>/manager</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-
-        <servlet-name>AddControl</servlet-name>
-        <url-pattern>/manager</url-pattern>
-
-        <servlet-name>DetailControl</servlet-name>
-        <url-pattern>/detail</url-pattern>
-
     </servlet-mapping>
     <session-config>
         <session-timeout>

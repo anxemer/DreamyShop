@@ -35,21 +35,18 @@ public class CategoryControl extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String cateId = request.getParameter("cid");
-
+        
         DAO dao = new DAO();
+        List<Game> list = dao.getGameByCate(cateId);
+        List<Game> listAllGame = dao.getAllGame();
         List<Category> listC = dao.getAllCategory();
-        if (cateId == null) {
-            List<Game> listAllGame = dao.getAllGame();
-            request.setAttribute("listG", listAllGame);
-
-        } else {
-            List<Game> list = dao.getGameByCate(cateId);
-            request.setAttribute("listG", list);
-
-        }
+        
+        request.setAttribute("listG", listAllGame);
         request.setAttribute("listC", listC);
+        request.setAttribute("listG", list);
         request.getRequestDispatcher("GameByCategory.jsp").forward(request, response);
 
+            
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
