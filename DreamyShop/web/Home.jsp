@@ -101,7 +101,7 @@
                     <div class="col-lg-3 col-md-3 col-7">
                         <!-- Start Header Logo -->
                         <a class="navbar-brand" href="home">
-                            <h1 style="color: aliceblue; font-size: medium;">Dreamy Shop</h1>
+                            <h1 style="color: aliceblue; font-size: medium;"><img src="assets\images\logo\taoanhdep_vinamilk_59684.png" alt="Logo"></h1>
                         </a>
                         <!-- End Header Logo -->
                     </div>
@@ -140,7 +140,7 @@
                                     </a>
                                 </div>
                                 <div class="cart-items">
-                                    <a href="javascript:void(0)" class="main-btn">
+                                    <a href="Cart.jsp" class="main-btn">
                                         <i class="lni lni-cart"></i>
                                         <span class="total-items">2</span>
                                     </a>
@@ -148,7 +148,7 @@
                                     <div class="shopping-item">
                                         <div class="dropdown-cart-header">
                                             <span>2 Items</span>
-                                            <a href="cart.html">View Cart</a>
+                                            <a href="Cart.jsp">View Cart</a>
                                         </div>
                                         <ul class="shopping-list">
                                             <li>
@@ -188,7 +188,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!--/ End Shopping Item -->
+                                    <!--/ End Shopping Item --> 
                                 </div>
                             </div>
                         </div>
@@ -270,9 +270,12 @@
                             <div class="single-slider"
                                 style="background-image: url(${s.image});">
                                 <div class="content">
-                                    <strong>BIG SALE</strong>
+                                    <strong style="font-weight: 1000;
+                                font-size: larger;
+                            color: white;
+                            text-shadow: 2px 2px 2px black;">BIG SALE</strong>
                                     <h1>
-                                       ${s.name}
+                                       
                                     </h1>
 <!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt ut labore et dolore magna aliqua.</p>-->
@@ -299,11 +302,14 @@
                                 style="background-image: url(${n.image});">
                                 <div class="content">
                                     
-                                        <b>NEW GAME</b>
-                                        <h1>
-                                        ${n.name}
+                                    <b style="font-weight: 1000;
+                                            font-size: larger;
+                                                color: white;
+                                            text-shadow: 2px 2px 4px black;">NEW GAME</b>
+<!--                                        <h1>
+                                        
                                     </h1>
-                                    <h3>${n.price} VND</h3>
+                                    <h3>${n.price} VND</h3>-->
                                 </div>
                                  
                             </div>
@@ -360,7 +366,7 @@
                         <div class="product-info">
                             <span class="category">${o.cateName}</span>
                             <h4 class="title">
-                                <a href="product-grids.html">${o.name}</a>
+                                <a href="detail?pid=${o.id}">${o.name}</a>
                             </h4>
                             <ul class="review">
                                 <li><i class="lni lni-star-filled"></i></li>
@@ -473,45 +479,13 @@
 
     <!-- Start Footer Area -->
     <footer class="footer">
-        <!-- Start Footer Top -->
-<!--        <div class="footer-top">
-            <div class="container">
-                <div class="inner-content">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4 col-12">
-                            <div class="footer-logo">
-                                <a href="index.html">
-                                    <img src="assets/images/logo/white-logo.svg" alt="#">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-9 col-md-8 col-12">
-                            <div class="footer-newsletter">
-                                <h4 class="title">
-                                    Subscribe to our Newsletter
-                                    <span>Get all the latest information, Sales and Offers.</span>
-                                </h4>
-                                <div class="newsletter-form-head">
-                                    <form action="#" method="get" target="_blank" class="newsletter-form">
-                                        <input name="EMAIL" placeholder="Email address here..." type="email">
-                                        <div class="button">
-                                            <button class="btn">Subscribe<span class="dir-part"></span></button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!-- End Footer Top -->
+        
         <!-- Start Footer Middle -->
         <div class="footer-middle">
             <div class="container">
                 <div class="bottom-inner">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-12">
+                        <div class="col-lg-4 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-contact">
                                 <h3>Get In Touch With Us</h3>
@@ -526,30 +500,8 @@
                             </div>
                             <!-- End Single Widget -->
                         </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <!-- Single Widget -->
-                            <div class="single-footer our-app">
-                                <h3>Our Mobile App</h3>
-                                <ul class="app-btn">
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <i class="lni lni-apple"></i>
-                                            <span class="small-title">Download on the</span>
-                                            <span class="big-title">App Store</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <i class="lni lni-play-store"></i>
-                                            <span class="small-title">Download on the</span>
-                                            <span class="big-title">Google Play</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- End Single Widget -->
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12">
+
+                        <div class="col-lg-4 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-link">
                                 <h3>Information</h3>
@@ -563,7 +515,7 @@
                             </div>
                             <!-- End Single Widget -->
                         </div>
-                        <div class="col-lg-3 col-md-6 col-12">
+                        <div class="col-lg-4 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-link">
                                 <h3>Shop Departments</h3>
@@ -582,39 +534,7 @@
             </div>
         </div>
         <!-- End Footer Middle -->
-        <!-- Start Footer Bottom -->
-<!--        <div class="footer-bottom">
-            <div class="container">
-                <div class="inner-content">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-12">
-                            <div class="payment-gateway">
-                                <span>We Accept:</span>
-                                <img src="assets/images/footer/credit-cards-footer.png" alt="#">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-12">
-                            <div class="copyright">
-                                <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow"
-                                        target="_blank">GrayGrids</a></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-12">
-                            <ul class="socila">
-                                <li>
-                                    <span>Follow Us On:</span>
-                                </li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-google"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!-- End Footer Bottom -->
+        
     </footer>
     <!--/ End Footer Area -->
 
