@@ -28,12 +28,12 @@ public class DBcontext {
         }
         return null;
     }
-    private final static String serverName = "LAP-OF-MING\\SQLEXPRESS";
+    private final static String serverName = "localhost";
     private final static String dbName = "DreamyShop";
     private final static String portNumber = "1433";
     private final static String instance = "";//LEAVE THIS ONE EMPTY IF YOUR SQL IS A SINGLE INSTANCE
     private final static String userID = "sa";
-    private final static String password = "123";
+    private final static String password = "1234";
     public static void main(String[] args) {
         try {
             System.out.println(new DBcontext().getConnection());
