@@ -6,11 +6,8 @@
 package Control;
 
 import DAO.DAO;
-import Entity.Category;
-import Entity.Game;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author anxem
  */
-public class CategoryControl extends HttpServlet {
+public class AddControl extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,23 +31,23 @@ public class CategoryControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String cateId = request.getParameter("cid");
-
+        String name = request.getParameter("name");
+        String price = request.getParameter("price");
+        String image = request.getParameter("image");
+        String image1 = request.getParameter("image1");
+        String image2 = request.getParameter("image2");
+        String image3 = request.getParameter("image3");
+        String image4 = request.getParameter("image4");
+        String video = request.getParameter("video");
+        String description = request.getParameter("description");
+        String category = request.getParameter("category");
+        
         DAO dao = new DAO();
-        List<Category> listC = dao.getAllCategory();
-        if (cateId == null) {
-            List<Game> listAllGame = dao.getAllGame();
-            request.setAttribute("listG", listAllGame);
-
-        } else {
-            List<Game> list = dao.getGameByCate(cateId);
-            request.setAttribute("listG", list);
-
-        }
-        request.setAttribute("listC", listC);
-        request.getRequestDispatcher("GameByCategory.jsp").forward(request, response);
-
+        dao.addGame(name, price, image, category, image1, image2, image3, image4, video, description);
+        response.sendRedirect("manager");
     }
+    
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

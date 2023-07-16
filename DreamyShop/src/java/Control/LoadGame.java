@@ -5,13 +5,10 @@
  */
 package Control;
 
-import DAO.DAO;
-import Entity.Category;
-import Entity.Game;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,7 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author anxem
  */
-public class CategoryControl extends HttpServlet {
+@WebServlet(name = "LoadGame", urlPatterns = {"/load"})
+public class LoadGame extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,22 +32,18 @@ public class CategoryControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String cateId = request.getParameter("cid");
-
-        DAO dao = new DAO();
-        List<Category> listC = dao.getAllCategory();
-        if (cateId == null) {
-            List<Game> listAllGame = dao.getAllGame();
-            request.setAttribute("listG", listAllGame);
-
-        } else {
-            List<Game> list = dao.getGameByCate(cateId);
-            request.setAttribute("listG", list);
-
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet LoadGame</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet LoadGame at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
-        request.setAttribute("listC", listC);
-        request.getRequestDispatcher("GameByCategory.jsp").forward(request, response);
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
