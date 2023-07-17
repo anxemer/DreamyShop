@@ -3,36 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <file>file:/D:/cn4/prj/ass1/projectPrj/DreamyShop/src/java/Control/TBControl.java</file>
-            <file>file:/D:/cn4/prj/ass1/projectPrj/DreamyShop/src/java/Control/DetailControl.java</file>
-            <file>file:/D:/cn4/prj/ass1/projectPrj/DreamyShop/src/java/DAO/DAO.java</file>
-            <file>file:/D:/cn4/prj/ass1/projectPrj/DreamyShop/src/java/Entity/TB.java</file>
-            <file>file:/D:/cn4/prj/ass1/projectPrj/DreamyShop/src/java/Entity/PS.java</file>
-            <file>file:/D:/cn4/prj/ass1/projectPrj/DreamyShop/src/java/Control/PSControl.java</file>
-            <file>file:/D:/cn4/prj/ass1/projectPrj/DreamyShop/src/java/Control/DetailTB.java</file>
-            <file>file:/D:/cn4/prj/ass1/projectPrj/DreamyShop/src/java/Control/DetailPS.java</file>
-            <file>file:/D:/cn4/prj/ass1/projectPrj/DreamyShop/src/java/Entity/Game.java</file>
-=======
             <file>file:/D:/ShopPrj/DreamyShop/src/java/Control/LoadGame.java</file>
-            <file>file:/D:/ShopPrj/DreamyShop/web/Home.jsp</file>
-            <file>file:/D:/ShopPrj/DreamyShop/web/Cart.jsp</file>
-            <file>file:/D:/ShopPrj/DreamyShop/src/java/DAO/DAO.java</file>
+            <file>file:/D:/ShopPrj/DreamyShop/web/FreeGame.jsp</file>
+            <file>file:/D:/ShopPrj/DreamyShop/src/java/Control/DetailControl.java</file>
             <file>file:/D:/ShopPrj/DreamyShop/src/java/Control/CategoryControl.java</file>
->>>>>>> 3178e9dc089339f00c250dc80c4426bc494e3707
-=======
-            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/web/DetailTB.jsp</file>
-            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/src/java/DAO/DAO.java</file>
-            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/src/java/Control/TBControl.java</file>
-            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/web/Home.jsp</file>
-            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/src/java/Entity/TB.java</file>
-            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/src/java/Control/DetailTB.java</file>
-            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/src/java/Control/PSControl.java</file>
-            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/web/Tb.jsp</file>
-            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/web/DetailPS.jsp</file>
-            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/src/java/Control/DetailControl.java</file>
->>>>>>> 4285af889cf3ec85f05a86cd2604eac87a9a3145
+            <file>file:/D:/ShopPrj/DreamyShop/web/WEB-INF/web.xml</file>
+            <file>file:/D:/ShopPrj/DreamyShop/src/java/DAO/DAO.java</file>
+            <file>file:/D:/ShopPrj/DreamyShop/web/Cart.jsp</file>
+            <file>file:/D:/ShopPrj/DreamyShop/web/Edit.jsp</file>
+            <file>file:/D:/ShopPrj/DreamyShop/src/java/Control/ManagerControl.java</file>
+            <file>file:/D:/ShopPrj/DreamyShop/web/Home.jsp</file>
+            <file>file:/D:/ShopPrj/DreamyShop/web/ManagerProduct.jsp</file>
+            <file>file:/D:/ShopPrj/DreamyShop/src/java/Control/HomeControl.java</file>
+            <file>file:/D:/ShopPrj/DreamyShop/src/java/Entity/Game.java</file>
+            <file>file:/D:/ShopPrj/DreamyShop/src/java/Context/DBcontext.java</file>
+            <file>file:/D:/ShopPrj/DreamyShop/src/java/Control/AddControl.java</file>
+            <file>file:/D:/ShopPrj/DreamyShop/web/Detail.jsp</file>
         </group>
     </open-files>
 </project-private>
