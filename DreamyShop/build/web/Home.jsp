@@ -396,10 +396,10 @@
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="single-banner" style="background-image:url('assets/images/banner/banner-1-bg.jpg')">
                         <div class="content">
-                            <h2>Smart Watch 2.0</h2>
-                            <p>Space Gray Aluminum Case with <br>Black/Volt Real Sport Band </p>
+                            <h2>Nintendo Switch</h2>
+                            <p>Electronic gaming equipment</p>
                             <div class="button">
-                                <a href="product-grids.html" class="btn">View Details</a>
+                                <a href="ps" class="btn">View</a>
                             </div>
                         </div>
                     </div>
@@ -408,11 +408,10 @@
                     <div class="single-banner custom-responsive-margin"
                         style="background-image:url('assets/images/banner/banner-2-bg.jpg')">
                         <div class="content">
-                            <h2>Smart Headphone</h2>
-                            <p>Lorem ipsum dolor sit amet, <br>eiusmod tempor
-                                incididunt ut labore.</p>
+                            <h2>Games for Nintendo consoles</h2>
+                            <p>All games for Nintendo consoles...</p>
                             <div class="button">
-                                <a href="product-grids.html" class="btn">Shop Now</a>
+                                <a href="tb" class="btn">View</a>
                             </div>
                         </div>
                     </div>
