@@ -4,6 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <file>file:/D:/cn4/prj/ass1/projectPrj/DreamyShop/src/java/Control/TBControl.java</file>
             <file>file:/D:/cn4/prj/ass1/projectPrj/DreamyShop/src/java/Control/DetailControl.java</file>
             <file>file:/D:/cn4/prj/ass1/projectPrj/DreamyShop/src/java/DAO/DAO.java</file>
@@ -20,6 +21,18 @@
             <file>file:/D:/ShopPrj/DreamyShop/src/java/DAO/DAO.java</file>
             <file>file:/D:/ShopPrj/DreamyShop/src/java/Control/CategoryControl.java</file>
 >>>>>>> 3178e9dc089339f00c250dc80c4426bc494e3707
+=======
+            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/web/DetailTB.jsp</file>
+            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/src/java/DAO/DAO.java</file>
+            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/src/java/Control/TBControl.java</file>
+            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/web/Home.jsp</file>
+            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/src/java/Entity/TB.java</file>
+            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/src/java/Control/DetailTB.java</file>
+            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/src/java/Control/PSControl.java</file>
+            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/web/Tb.jsp</file>
+            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/web/DetailPS.jsp</file>
+            <file>file:/D:/cn4/prj/file%20ass/projectPrj/DreamyShop/src/java/Control/DetailControl.java</file>
+>>>>>>> 4285af889cf3ec85f05a86cd2604eac87a9a3145
         </group>
     </open-files>
 </project-private>

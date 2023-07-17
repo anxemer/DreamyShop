@@ -323,6 +323,112 @@ public class DAO {
         return null;
     }
 
+    public List<PS> getAllPS() {
+        List<PS> list = new ArrayList<>();
+        String query = "SELECT PS.*, InforPS.*\n"
+                + "FROM PS\n"
+                + "JOIN InforPS ON InforPS.id = PS.id";
+        try {
+            conn = new DBcontext().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new PS(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getFloat(4),
+                        rs.getInt(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9)
+                ));
+            }
+        } catch (Exception e) {
+        }
+        return list;
+    }
+
+    public PS getPSByID(String id) {
+        String query = "SELECT PS.*, InforPS.*\n"
+                + "FROM PS\n"
+                + "JOIN InforPS ON InforPS.id = PS.id\n"
+                + "where PS.id = ?";
+        try {
+            conn = new DBcontext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new PS(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getFloat(4),
+                        rs.getInt(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9)
+                );
+            }
+        } catch (Exception e) {
+        }
+        return null;
+    }
+
+    public List<TB> getAllTB() {
+        List<TB> list = new ArrayList<>();
+        String query = "SELECT TB.*, InforTB.*\n"
+                + "FROM TB\n"
+                + "JOIN InforTB ON InforTB.id = TB.id";
+        try {
+            conn = new DBcontext().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new TB(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getFloat(4),
+                        rs.getInt(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9)
+                ));
+            }
+        } catch (Exception e) {
+        }
+        return list;
+    }
+
+    public TB getTBByID(String id) {
+        String query = "SELECT TB.*, InforTB.*\n"
+                + "FROM TB\n"
+                + "JOIN InforTB ON InforTB.id = TB.id\n"
+                + "where TB.id = ?";
+        try {
+            conn = new DBcontext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new TB(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getFloat(4),
+                        rs.getInt(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9)
+                );
+            }
+        } catch (Exception e) {
+        }
+        return null;
+    }
+
     public static void main(String[] args) {
         DAO dao = new DAO();
 //        List<Game> list = dao.getAllGame();
@@ -339,6 +445,7 @@ public class DAO {
 //            System.out.println(c);
 //            
 //        }
+<<<<<<< HEAD
 =======
     public void addGame(String name,String price,String image,String category,String image1,String image2,String image3,String image4,
                         String video,String description){
@@ -373,5 +480,7 @@ public class DAO {
             
         }
 >>>>>>> 3178e9dc089339f00c250dc80c4426bc494e3707
+=======
+>>>>>>> 4285af889cf3ec85f05a86cd2604eac87a9a3145
     }
 }
