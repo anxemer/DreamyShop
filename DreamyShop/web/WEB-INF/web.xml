@@ -24,6 +24,22 @@
         <servlet-name>DetailControl</servlet-name>
         <servlet-class>Control.DetailControl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PSControl</servlet-name>
+        <servlet-class>Control.PSControl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TBControl</servlet-name>
+        <servlet-class>Control.TBControl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DetailPS</servlet-name>
+        <servlet-class>Control.DetailPS</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DetailTB</servlet-name>
+        <servlet-class>Control.DetailTB</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeControl</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -47,6 +63,22 @@
     <servlet-mapping>
         <servlet-name>DetailControl</servlet-name>
         <url-pattern>/detail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PSControl</servlet-name>
+        <url-pattern>/ps</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TBControl</servlet-name>
+        <url-pattern>/tb</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DetailPS</servlet-name>
+        <url-pattern>/detailps</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DetailTB</servlet-name>
+        <url-pattern>/detailtb</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -8,6 +8,8 @@ import Context.DBcontext;
 import Entity.Account;
 import Entity.Category;
 import Entity.Game;
+import Entity.PS;
+import Entity.TB;
 import static com.sun.corba.se.impl.util.Utility.printStackTrace;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -247,6 +249,112 @@ public class DAO {
         }
     }
 
+    public List<PS> getAllPS() {
+        List<PS> list = new ArrayList<>();
+        String query = "SELECT PS.*, InforPS.*\n"
+                + "FROM PS\n"
+                + "JOIN InforPS ON InforPS.id = PS.id";
+        try {
+            conn = new DBcontext().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new PS(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getFloat(4),
+                        rs.getInt(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9)
+                ));
+            }
+        } catch (Exception e) {
+        }
+        return list;
+    }
+
+    public PS getPSByID(String id) {
+        String query = "SELECT PS.*, InforPS.*\n"
+                + "FROM PS\n"
+                + "JOIN InforPS ON InforPS.id = PS.id\n"
+                + "where PS.id = ?";
+        try {
+            conn = new DBcontext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new PS(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getFloat(4),
+                        rs.getInt(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9)
+                );
+            }
+        } catch (Exception e) {
+        }
+        return null;
+    }
+
+    public List<TB> getAllTB() {
+        List<TB> list = new ArrayList<>();
+        String query = "SELECT TB.*, InforTB.*\n"
+                + "FROM TB\n"
+                + "JOIN InforTB ON InforTB.id = TB.id";
+        try {
+            conn = new DBcontext().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new TB(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getFloat(4),
+                        rs.getInt(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9)
+                ));
+            }
+        } catch (Exception e) {
+        }
+        return list;
+    }
+
+    public TB getTBByID(String id) {
+        String query = "SELECT TB.*, InforTB.*\n"
+                + "FROM TB\n"
+                + "JOIN InforTB ON InforTB.id = TB.id\n"
+                + "where TB.id = ?";
+        try {
+            conn = new DBcontext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new TB(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getFloat(4),
+                        rs.getInt(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9)
+                );
+            }
+        } catch (Exception e) {
+        }
+        return null;
+    }
+
     public static void main(String[] args) {
         DAO dao = new DAO();
 //        List<Game> list = dao.getAllGame();
@@ -255,7 +363,13 @@ public class DAO {
 //            System.out.println(game);
 //
 //        }
-            Game g = dao.getGameByID("2");
-            System.out.println(g);
+        PS g = dao.getPSByID("1");
+        System.out.println(g);
+//        List<Category> listC = dao.getAllCategory();
+//        List<TB> list = dao.getAllTB();
+//        for (TB c : list) {
+//            System.out.println(c);
+//            
+//        }
     }
 }
