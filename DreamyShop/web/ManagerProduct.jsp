@@ -72,14 +72,14 @@
                                 </td>
                                 <td>${o.price} VND</td>
                                 <td>
-                                    <a href="#editEmployeeModal"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="edit"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                     <a href="delete?gid=${o.id}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
                         </c:forEach>
                     </tbody>
                 </table>
-                <div class="clearfix">
+<!--                <div class="clearfix">
                     <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
                     <ul class="pagination">
                         <li class="page-item disabled"><a href="#">Previous</a></li>
@@ -90,7 +90,7 @@
                         <li class="page-item"><a href="#" class="page-link">5</a></li>
                         <li class="page-item"><a href="#" class="page-link">Next</a></li>
                     </ul>
-                </div>
+                </div>-->
             </div>
             <a href="home"><button type="button" class="btn btn-primary">Back to home</button></a>
 
@@ -120,18 +120,23 @@
                             
                             <div class="form-group">
                                 <label>Image 1</label>
-                                <input name="image" type="text" class="form-control" required>
+                                <input name="image1" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Image 2</label>
-                                <input name="image" type="text" class="form-control" required>
+                                <input name="image2" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Image3</label>
-                                <input name="image" type="text" class="form-control" required>
-                            </div><div class="form-group">
+                                <input name="image3" type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
                                 <label>Image 4</label>
-                                <input name="image" type="text" class="form-control" required>
+                                <input name="image4" type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Video</label>
+                                <input name="video" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Description</label>
